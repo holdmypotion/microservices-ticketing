@@ -1,0 +1,59 @@
+### Create a User
+POST https://ticketing.dev/api/users/signup
+Content-Type: application/json
+
+{
+	"email": "test1@test.com",
+	"password": "testpass"
+}
+
+### signout
+GET https://ticketing.dev/api/users/signout
+Content-Type: application/json
+
+
+###
+GET https://ticketing.dev/api/users/currentuser
+
+
+### Creating a Ticket
+POST https://ticketing.dev/api/tickets/
+Content-Type: application/json
+
+{
+  "title": "New ticket",
+	"price": 40
+}
+
+###
+GET https://ticketing.dev/api/tickets/61939774a1a4bd64d67c0a29
+
+###
+PUT https://ticketing.dev/api/tickets/61939774a1a4bd64d67c0a29
+Content-Type: application/json
+
+{
+  "title": "Concert",
+	"price": 90
+}
+
+### Create an Order
+POST https://ticketing.dev/api/orders/
+Content-Type: application/json
+
+{
+	"ticketId": "619888ddf13968150de21adc"
+}
+
+### Get the order
+GET https://ticketing.dev/api/orders/619885f512d4d7b44b421545
+Content-Type: application/json
+
+### Create a fake charge
+POST https://ticketing.dev/api/payments/
+Content-Type: application/json
+
+{
+	"token": "tok_visa",
+	"orderId": "619888e9531a77e5a0a68457"
+}
